@@ -30,7 +30,12 @@ export const Note = ({ onDelete }: NoteProps) => {
             <Link to={`/${note.id}/edit`}>
               <Button variant="primary">Edit</Button>
             </Link>
-            <Button onClick={() => { onDelete(note.id) navigate('/') }} variant="outline-danger">
+            <Button
+              onClick={() => {
+                onDelete(note.id), navigate("/");
+              }}
+              variant="outline-danger"
+            >
               Delete
             </Button>
             <Link to="/">
